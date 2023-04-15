@@ -1,0 +1,6 @@
+Refrigerador                         Frezzer
+10:24 Arranco                        10:29 Paro 
+10:50 Paro                           10:46 Arranco
+11:30 Arranco                        11:14 Arranco
+11:56 debeParar                      11:27 Paro
+10:13 Arranco

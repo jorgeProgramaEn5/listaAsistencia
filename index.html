@@ -1,131 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
-   
+  
     <head>
-        <title>Registro de asistencia</title>
+        <title>EmBiciate de Cuba</title>
+        <link rel="icon" href="multimedia/g21427.png">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="descripcion" content="aqui pongo una descripcion"/>
         <meta name="kayword" content="palabras claves"/>
         <meta name="author" content="Jorge Estrada Machado"/>
         <meta name="copyright" content="Nomber de la empresa"/>
-        <link rel="stylesheet" type="text/css" href="estilo clase 2.css">
+        <link rel="stylesheet" type="text/css" href="estilo azul.css">
         <link rel="stylesheet" type="text/css" href="normalize.css">
-        <script src="codigo.js"></script>
+        <script type="text/javascript" src="funciones.js"></script>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
+    <body>
+    <!--Menu-->
+    <nav class="menu">
+        <div class="hamburger" onclick="mostrar()">
+            <span></span><span></span><span></span>
+        </div>
+        <label class="logo">EmBiciate</label> <!--label(leyenda para un campo)-->
+        <ul id="sliding_menu"> <!--menu corredizo-->
+            <li><span class="close" onclick="ocultar()"><</span></li> 
+            <li><a href="#">Inicio</a></li>
+            <li><a href="Generador de degradados/backgraund generator.html">Degradados</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Eventos</a></li>
+            <li><a href="Formulario/form.html">Contactenos</a></li>
+        </ul>
+    </nav>
 
-    <body> 
-               
-        <div><h1>DIA <span id="numeroDias">1</span></h1></div>        
-        <button class="boton_Saber-mas" id="buton">REGISTRO DE ASISTENCIA</button>
-        <button class="boton_Saber-mas" id="buton2">Muestrame la semana</button>
-        <p id="demo">hola</p>
-                
-                <script>
-                //     let free = false
-                // function validarCliente(argument) {
-	            // let edad = prompt("Que edad tienes?")
-		        //         if (edad >= 18) {
-			    //             hora = prompt("que hora es?")
-                //             if (hora >= 2 && free == false) {
-                //                 alert("pasa gratis")
-                //                 free = true
-                //             }
-                //             else {
-                //             alert("paga la entrada")
-		        //             }
-                //             }
-                            
-                //         else {
-                //             alert("Sal de aqui chama")
-                //         }
-                // }
+    <!--FinMenu-->
 
-                //document.getElementById("buton").addEventListener("click" ,validarCliente);
-                
-                let dia = 1;
+    <!--Banner-->
+    <header>
+        <div  class="banner" onclick="ocultar()">
+            <div class="text_banner">
+                <h1>Embiciate de Salud</h1>
+                <p>Conocer los atractivos de una ciudad en un recorrido 
+                en bicicleta es una sensación completamente diferente, pocas 
+                actividades en la vida te pueden ofrecer el sentimiento de libertad 
+                que se experimenta a bordo de un cicla</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="nosotros" onclick="ocultar()">
+            <h1 class="titulo">¿Quienes somos?</h1>
+            <div class="linea"></div>
+            <p class="contenido">Somos una compañia la cual tiene como objetivo ofrecer 
+                servicios relacionados con el mundo del ciclismo. La cual, desde el punto de
+                vista ambiental, tiene como obejetivo promover el turismo ecológico, crear conciencia 
+                ambiental asi como fomentar políticas sostenibles y promover el uso de la bicicleta y 
+                la divulgación de sus bondades. En el plano social, la compañia es fuente de empleo para 
+                jóvenes y mujeres de la comunidad, conformando asi un equipo que aprovecha de los recursos 
+                endógenos de la localidad y que permite coexistir con más de un actor local en el proyecto.
+            </p>
+            <p class="contenido">En el plano economico, nuestro equipo esta comprometido en hacer quel cliente 
+                disfrute de una experiencia maravillosa por el precio mas competitivo del mercado. Los ingresos 
+                generados son para el desarrollo de la localidad y miembros del proyecto y de esta forma se cotribuye 
+                al aumento del turismo en el territorio
+            </p>
+            <a href="Quienes Somos/Q S.html" class="boton">Ver más</a>
+        </section>
 
-                let dia1 
-                let dia2
-                let dia3
-                let dia4
-                
-                let estudiantes
-
-                // let jenifer = [dia1[0],dia2[0],dia3[0],dia4[0],]
-
-                // let semana = {
-                //     "Dia 1": dia1, 
-                //     "Dia 2": dia2, 
-                //     "Dia 3": dia3, 
-                //     "Dia 4": dia4
-                // }
-                
-                function preguntarAlumnos() { 
-                    estudiantes = [
-                    prompt("Jenifer"),
-                    prompt("Carlos"),
-                    prompt("Cofla"),
-                    prompt("Manuela"),
-                    prompt("Agusto"),
-                    // prompt("Jorge"),
-                    // prompt("Alberto"),
-                    // prompt("Luis"),
-                    // prompt("Carla"),
-                    // prompt("Felipa"),
-                ]
-                }
-
-                function accionBoton() {
-                    preguntarAlumnos()
-                    dia++;
-                    document.getElementById("numeroDias").innerHTML = dia;
-                    
-                    if (dia == 2) {
-                        dia1 = estudiantes
-                        document.getElementById("demo").innerHTML = dia1;
-                    }
-
-                    else if (dia == 3) {
-                        dia2 = estudiantes
-                        document.getElementById("demo").innerHTML = dia2;
-                    }
-
-                    else if (dia == 4) {
-                        dia3 = estudiantes
-                        document.getElementById("demo").innerHTML = dia3;
-                    }
-
-                    else {
-                        dia4 = estudiantes
-                        document.getElementById("demo").innerHTML = dia4;
-                    }
-                }
-
-                function accionBoton2(){
-                    document.getElementById("demo").innerHTML = semana;
-                }
-
-                document.getElementById("buton").addEventListener("click" ,accionBoton);
-                document.getElementById("buton2").addEventListener("click" ,accionBoton2);
-                
-                // let semana = {
-                //     "Dia 1": dia1, 
-                //     "Dia 2": dia2, 
-                //     "Dia 3": dia3, 
-                //     "Dia 4": dia4
-                // }
-
-               
-
-                </script>
-    </body>       
-
-    <aside>
-    </aside>
-
-    <footer>
+        <section class="servicios" onclick="ocultar()">
+            <h1 class="titulo">Nuestros Servicios</h1>
+            <div class="linea"></div>
+            <div class="contenido" onclick="ocultar()">
+                <div class="imagen">
+                    <div><img src="multimedia/RENTA.jpg"></div>
+                    <p>Adquiler de bicicleta</p>
+                    <a href="#" class="boton_Servicios">Ver más</a>
+                </div>
+                <div class="imagen">
+                    <div><img src="multimedia/RUTAS.jpg"></div>
+                    <p>Rutas guiadas</p>
+                    <a href="#" class="boton_Servicios">Ver más</a>
+                </div>
+                <div class="imagen">
+                    <div><img src="multimedia/REPARACION.jpg"></div>
+                    <p>Reparacion de bicicleta</p>
+                    <a href="#" class="boton_Servicios">Ver más</a>
+                </div>
+                <div class="imagen">
+                    <div><img src="multimedia/MENSAJERÍA.jpg"></div>
+                    <p>Servicio de mensajeria</p>
+                    <a href="Lista de Productos/lista.html" class="boton_Servicios">Ver más</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <h3>Siguenos en:</h3>
+        <i class='bx bxl-facebook-circle bx-tada' style='color:#ffffff' ></i>
+        <i class='bx bxl-youtube bx-tada' style='color:#ffffff' ></i>
+        <i class='bx bxl-twitter bx-tada' style='color:#ffffff' ></i>
+        <i class='bx bxl-telegram bx-tada' style='color:#ffffff' ></i>
     </footer>
-
+    
+    </body>       
 </html>
      
